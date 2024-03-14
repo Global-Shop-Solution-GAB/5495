@@ -1,0 +1,16 @@
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Author: Bix
+'Date: 11/30/2018
+'Run the Backward Schedule for all WOs from today
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+F.Global.General.CallWrapperSyncBio(500040,"")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
